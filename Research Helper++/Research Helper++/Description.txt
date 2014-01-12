@@ -1,0 +1,9 @@
+Research Helper ++ is an application that allows anyone to log and conduct scientific experiments with ease
+
+Code structure:
+
+Header file (*.h):
+	define custom namespace UI elements
+
+Code file (*.cpp):
+	All "Code" (i.e. calculations, operations, etc.)
