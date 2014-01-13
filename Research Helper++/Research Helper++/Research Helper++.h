@@ -57,9 +57,12 @@ namespace ResearchHelper {
 			this->ClientSize = System::Drawing::Size(1105, 636);
 			this->Name = L"ResearchHelper";
 			this->Text = L"ResearchHelper";
+			this->Load += gcnew System::EventHandler(this, &ResearchHelper::ResearchHelper_Load);
 			this->ResumeLayout(false);
 
 		}
 #pragma endregion
+	private: System::Void ResearchHelper_Load(System::Object^  sender, System::EventArgs^  e) {
+	}
 	};
 }

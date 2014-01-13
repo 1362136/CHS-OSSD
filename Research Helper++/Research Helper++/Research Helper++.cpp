@@ -1,3 +1,2 @@
 #include "Research Helper++.h"
 
-
