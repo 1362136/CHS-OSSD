@@ -15,16 +15,16 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="Description.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="Research Helper++.cpp">
+    <ClCompile Include="Research Helper.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Research Helper++.h">
+    <ClInclude Include="Research Helper.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="What it does.txt" />
   </ItemGroup>
 </Project>

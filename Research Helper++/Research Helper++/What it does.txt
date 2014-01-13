@@ -1,0 +1,1 @@
+The forum itself and all the elements are in the .h file. The .h file also has classes and methods The .cpp file tells us what to do with the buttons
