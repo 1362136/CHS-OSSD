@@ -2,9 +2,13 @@
 
 int main()
 {
+	//TODO load the form 
 	return 0;
 }
 
-System::Void ResearchHelper_Load(System::Object^  sender, System::EventArgs^  e){
-	//TODO something at form load
+namespace ResearchHelper{
+
+	System::Void ResearchHelper::ResearchHelper_Load(System::Object^  sender, System::EventArgs^  e){
+		// TODO something at form load
+	}
 }

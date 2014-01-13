@@ -35,14 +35,25 @@ namespace ResearchHelper {
 			}
 		}
 	private: System::Windows::Forms::TabControl^  tabControl;
+	private: System::Windows::Forms::TabPage^  LogTab;
+	private: System::Windows::Forms::TabPage^  NotesTabs;
+	private: System::Windows::Forms::TabPage^  EDDTab;
+	private: System::Windows::Forms::TabPage^  DataTab;
 	protected:
 
 	protected:
-	private: System::Windows::Forms::TabPage^  tabPage1;
-	private: System::Windows::Forms::TabPage^  tabPage2;
-	private: System::Windows::Forms::TabPage^  tabPage3;
-	private: System::Windows::Forms::TabPage^  tabPage4;
-	private: System::Windows::Forms::TabPage^  tabPage5;
+
+
+
+
+	private: System::Windows::Forms::TabPage^  SearchTab;
+	private: System::Windows::Forms::Button^  Go_btn;
+
+	private: System::Windows::Forms::TextBox^  textBox1;
+	private: System::Windows::Forms::Button^  Forward_btn;
+	private: System::Windows::Forms::Button^  Backwards_btn;
+	private: System::Windows::Forms::WebBrowser^  webBrowser1;
+
 
 	private:
 		/// <summary>
@@ -57,77 +68,132 @@ namespace ResearchHelper {
 		/// </summary>
 		void InitializeComponent(void)
 		{
+			System::ComponentModel::ComponentResourceManager^  resources = (gcnew System::ComponentModel::ComponentResourceManager(ResearchHelper::typeid));
 			this->tabControl = (gcnew System::Windows::Forms::TabControl());
-			this->tabPage1 = (gcnew System::Windows::Forms::TabPage());
-			this->tabPage2 = (gcnew System::Windows::Forms::TabPage());
-			this->tabPage3 = (gcnew System::Windows::Forms::TabPage());
-			this->tabPage4 = (gcnew System::Windows::Forms::TabPage());
-			this->tabPage5 = (gcnew System::Windows::Forms::TabPage());
+			this->LogTab = (gcnew System::Windows::Forms::TabPage());
+			this->NotesTabs = (gcnew System::Windows::Forms::TabPage());
+			this->EDDTab = (gcnew System::Windows::Forms::TabPage());
+			this->DataTab = (gcnew System::Windows::Forms::TabPage());
+			this->SearchTab = (gcnew System::Windows::Forms::TabPage());
+			this->webBrowser1 = (gcnew System::Windows::Forms::WebBrowser());
+			this->Backwards_btn = (gcnew System::Windows::Forms::Button());
+			this->Forward_btn = (gcnew System::Windows::Forms::Button());
+			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
+			this->Go_btn = (gcnew System::Windows::Forms::Button());
 			this->tabControl->SuspendLayout();
+			this->SearchTab->SuspendLayout();
 			this->SuspendLayout();
 			// 
 			// tabControl
 			// 
-			this->tabControl->Controls->Add(this->tabPage1);
-			this->tabControl->Controls->Add(this->tabPage2);
-			this->tabControl->Controls->Add(this->tabPage3);
-			this->tabControl->Controls->Add(this->tabPage4);
-			this->tabControl->Controls->Add(this->tabPage5);
+			this->tabControl->Controls->Add(this->EDDTab);
+			this->tabControl->Controls->Add(this->LogTab);
+			this->tabControl->Controls->Add(this->NotesTabs);
+			this->tabControl->Controls->Add(this->DataTab);
+			this->tabControl->Controls->Add(this->SearchTab);
 			this->tabControl->Location = System::Drawing::Point(12, 12);
 			this->tabControl->Name = L"tabControl";
 			this->tabControl->SelectedIndex = 0;
 			this->tabControl->Size = System::Drawing::Size(1353, 722);
 			this->tabControl->TabIndex = 0;
 			// 
-			// tabPage1
+			// LogTab
 			// 
-			this->tabPage1->Location = System::Drawing::Point(4, 22);
-			this->tabPage1->Name = L"tabPage1";
-			this->tabPage1->Padding = System::Windows::Forms::Padding(3);
-			this->tabPage1->Size = System::Drawing::Size(1345, 696);
-			this->tabPage1->TabIndex = 0;
-			this->tabPage1->Text = L"tabPage1";
-			this->tabPage1->UseVisualStyleBackColor = true;
+			this->LogTab->Location = System::Drawing::Point(4, 22);
+			this->LogTab->Name = L"LogTab";
+			this->LogTab->Padding = System::Windows::Forms::Padding(3);
+			this->LogTab->Size = System::Drawing::Size(1345, 696);
+			this->LogTab->TabIndex = 0;
+			this->LogTab->Text = L"Log";
+			this->LogTab->UseVisualStyleBackColor = true;
 			// 
-			// tabPage2
+			// NotesTabs
 			// 
-			this->tabPage2->Location = System::Drawing::Point(4, 22);
-			this->tabPage2->Name = L"tabPage2";
-			this->tabPage2->Padding = System::Windows::Forms::Padding(3);
-			this->tabPage2->Size = System::Drawing::Size(1345, 696);
-			this->tabPage2->TabIndex = 1;
-			this->tabPage2->Text = L"tabPage2";
-			this->tabPage2->UseVisualStyleBackColor = true;
+			this->NotesTabs->Location = System::Drawing::Point(4, 22);
+			this->NotesTabs->Name = L"NotesTabs";
+			this->NotesTabs->Padding = System::Windows::Forms::Padding(3);
+			this->NotesTabs->Size = System::Drawing::Size(1345, 696);
+			this->NotesTabs->TabIndex = 1;
+			this->NotesTabs->Text = L"Notes";
+			this->NotesTabs->UseVisualStyleBackColor = true;
 			// 
-			// tabPage3
+			// EDDTab
 			// 
-			this->tabPage3->Location = System::Drawing::Point(4, 22);
-			this->tabPage3->Name = L"tabPage3";
-			this->tabPage3->Padding = System::Windows::Forms::Padding(3);
-			this->tabPage3->Size = System::Drawing::Size(1345, 696);
-			this->tabPage3->TabIndex = 2;
-			this->tabPage3->Text = L"tabPage3";
-			this->tabPage3->UseVisualStyleBackColor = true;
+			this->EDDTab->Location = System::Drawing::Point(4, 22);
+			this->EDDTab->Name = L"EDDTab";
+			this->EDDTab->Padding = System::Windows::Forms::Padding(3);
+			this->EDDTab->Size = System::Drawing::Size(1345, 696);
+			this->EDDTab->TabIndex = 2;
+			this->EDDTab->Text = L"EDD";
+			this->EDDTab->UseVisualStyleBackColor = true;
 			// 
-			// tabPage4
+			// DataTab
 			// 
-			this->tabPage4->Location = System::Drawing::Point(4, 22);
-			this->tabPage4->Name = L"tabPage4";
-			this->tabPage4->Padding = System::Windows::Forms::Padding(3);
-			this->tabPage4->Size = System::Drawing::Size(1345, 696);
-			this->tabPage4->TabIndex = 3;
-			this->tabPage4->Text = L"tabPage4";
-			this->tabPage4->UseVisualStyleBackColor = true;
+			this->DataTab->Location = System::Drawing::Point(4, 22);
+			this->DataTab->Name = L"DataTab";
+			this->DataTab->Padding = System::Windows::Forms::Padding(3);
+			this->DataTab->Size = System::Drawing::Size(1345, 696);
+			this->DataTab->TabIndex = 3;
+			this->DataTab->Text = L"Data";
+			this->DataTab->UseVisualStyleBackColor = true;
 			// 
-			// tabPage5
+			// SearchTab
 			// 
-			this->tabPage5->Location = System::Drawing::Point(4, 22);
-			this->tabPage5->Name = L"tabPage5";
-			this->tabPage5->Padding = System::Windows::Forms::Padding(3);
-			this->tabPage5->Size = System::Drawing::Size(1345, 696);
-			this->tabPage5->TabIndex = 4;
-			this->tabPage5->Text = L"tabPage5";
-			this->tabPage5->UseVisualStyleBackColor = true;
+			this->SearchTab->Controls->Add(this->Go_btn);
+			this->SearchTab->Controls->Add(this->textBox1);
+			this->SearchTab->Controls->Add(this->Forward_btn);
+			this->SearchTab->Controls->Add(this->Backwards_btn);
+			this->SearchTab->Controls->Add(this->webBrowser1);
+			this->SearchTab->Location = System::Drawing::Point(4, 22);
+			this->SearchTab->Name = L"SearchTab";
+			this->SearchTab->Padding = System::Windows::Forms::Padding(3);
+			this->SearchTab->Size = System::Drawing::Size(1345, 696);
+			this->SearchTab->TabIndex = 4;
+			this->SearchTab->Text = L"Search Web";
+			this->SearchTab->UseVisualStyleBackColor = true;
+			// 
+			// webBrowser1
+			// 
+			this->webBrowser1->Location = System::Drawing::Point(3, 35);
+			this->webBrowser1->MinimumSize = System::Drawing::Size(20, 20);
+			this->webBrowser1->Name = L"webBrowser1";
+			this->webBrowser1->Size = System::Drawing::Size(1339, 661);
+			this->webBrowser1->TabIndex = 0;
+			this->webBrowser1->Url = (gcnew System::Uri(L"http://www.jstor.org/", System::UriKind::Absolute));
+			// 
+			// Backwards_btn
+			// 
+			this->Backwards_btn->Location = System::Drawing::Point(6, 6);
+			this->Backwards_btn->Name = L"Backwards_btn";
+			this->Backwards_btn->Size = System::Drawing::Size(75, 23);
+			this->Backwards_btn->TabIndex = 1;
+			this->Backwards_btn->Text = L"Backwards";
+			this->Backwards_btn->UseVisualStyleBackColor = true;
+			// 
+			// Forward_btn
+			// 
+			this->Forward_btn->Location = System::Drawing::Point(87, 6);
+			this->Forward_btn->Name = L"Forward_btn";
+			this->Forward_btn->Size = System::Drawing::Size(75, 23);
+			this->Forward_btn->TabIndex = 2;
+			this->Forward_btn->Text = L"Forward";
+			this->Forward_btn->UseVisualStyleBackColor = true;
+			// 
+			// textBox1
+			// 
+			this->textBox1->Location = System::Drawing::Point(169, 8);
+			this->textBox1->Name = L"textBox1";
+			this->textBox1->Size = System::Drawing::Size(1094, 20);
+			this->textBox1->TabIndex = 3;
+			// 
+			// Go_btn
+			// 
+			this->Go_btn->Location = System::Drawing::Point(1269, 6);
+			this->Go_btn->Name = L"Go_btn";
+			this->Go_btn->Size = System::Drawing::Size(70, 23);
+			this->Go_btn->TabIndex = 4;
+			this->Go_btn->Text = L"Go";
+			this->Go_btn->UseVisualStyleBackColor = true;
 			// 
 			// ResearchHelper
 			// 
@@ -135,10 +201,13 @@ namespace ResearchHelper {
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(1377, 746);
 			this->Controls->Add(this->tabControl);
+			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
 			this->Name = L"ResearchHelper";
 			this->Text = L"ResearchHelper";
 			this->Load += gcnew System::EventHandler(this, &ResearchHelper::ResearchHelper_Load);
 			this->tabControl->ResumeLayout(false);
+			this->SearchTab->ResumeLayout(false);
+			this->SearchTab->PerformLayout();
 			this->ResumeLayout(false);
 
 		}
