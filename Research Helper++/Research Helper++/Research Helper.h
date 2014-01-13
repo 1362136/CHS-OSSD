@@ -12,7 +12,7 @@ namespace ResearchHelper {
 	/// <summary>
 	/// Summary for ResearchHelper
 	/// </summary>
-	public ref class ResearchHelper : public System::Windows::Forms::Form
+	public ref class ResearchHelper : public System::Windows::Forms::Form //class strarts here in namespace
 	{
 	public:
 		ResearchHelper(void)
@@ -144,14 +144,7 @@ namespace ResearchHelper {
 		}
 #pragma endregion
 	
-	//Things todo at form load
-	private: System::Void ResearchHelper_Load(System::Object^  sender, System::EventArgs^  e){
-
-	}
-	};
-
-	public ref class actual_buttons: public ResearchHelper{
-		//put all button actions here (in .ccp file ofcourse)
-
+	// here and below is in .cpp file
+	private: System::Void ResearchHelper_Load(System::Object^  sender, System::EventArgs^  e);
 	};
 }
