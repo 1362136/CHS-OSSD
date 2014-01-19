@@ -215,5 +215,5 @@ namespace ResearchHelper {
 	
 	// here and below is in .cpp file
 	private: System::Void ResearchHelper_Load(System::Object^  sender, System::EventArgs^  e);
-	};
+	};//end of class ResearchHelper
 }

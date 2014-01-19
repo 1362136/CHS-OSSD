@@ -1,8 +1,16 @@
 #include "Research Helper.h"
 
-int main()
+using namespace ResearchHelper;
+
+[STAThreadAttribute]
+int main(array<System::String ^> ^args)
 {
-	//TODO load the form 
+	Application::EnableVisualStyles();
+	Application::SetCompatibleTextRenderingDefault(false);
+
+	// Create the main window and run it
+	Application::Run(gcnew Form());
+
 	return 0;
 }
 
