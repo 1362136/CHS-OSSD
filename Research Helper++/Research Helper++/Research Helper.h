@@ -48,8 +48,9 @@ namespace ResearchHelperSpace {
 
 	private: System::Windows::Forms::TabPage^  SearchTab;
 	private: System::Windows::Forms::Button^  Go_btn;
+	private: System::Windows::Forms::TextBox^  searchBox;
 
-	private: System::Windows::Forms::TextBox^  textBox1;
+
 	private: System::Windows::Forms::Button^  Forward_btn;
 	private: System::Windows::Forms::Button^  Backwards_btn;
 	private: System::Windows::Forms::WebBrowser^  webBrowser1;
@@ -75,7 +76,7 @@ namespace ResearchHelperSpace {
 			this->DataTab = (gcnew System::Windows::Forms::TabPage());
 			this->SearchTab = (gcnew System::Windows::Forms::TabPage());
 			this->Go_btn = (gcnew System::Windows::Forms::Button());
-			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
+			this->searchBox = (gcnew System::Windows::Forms::TextBox());
 			this->Forward_btn = (gcnew System::Windows::Forms::Button());
 			this->Backwards_btn = (gcnew System::Windows::Forms::Button());
 			this->webBrowser1 = (gcnew System::Windows::Forms::WebBrowser());
@@ -139,7 +140,7 @@ namespace ResearchHelperSpace {
 			// SearchTab
 			// 
 			this->SearchTab->Controls->Add(this->Go_btn);
-			this->SearchTab->Controls->Add(this->textBox1);
+			this->SearchTab->Controls->Add(this->searchBox);
 			this->SearchTab->Controls->Add(this->Forward_btn);
 			this->SearchTab->Controls->Add(this->Backwards_btn);
 			this->SearchTab->Controls->Add(this->webBrowser1);
@@ -159,13 +160,14 @@ namespace ResearchHelperSpace {
 			this->Go_btn->TabIndex = 4;
 			this->Go_btn->Text = L"Go";
 			this->Go_btn->UseVisualStyleBackColor = true;
+			this->Go_btn->Click += gcnew System::EventHandler(this, &ResearchHelper::Go_btn_Click);
 			// 
-			// textBox1
+			// searchBox
 			// 
-			this->textBox1->Location = System::Drawing::Point(169, 8);
-			this->textBox1->Name = L"textBox1";
-			this->textBox1->Size = System::Drawing::Size(1094, 20);
-			this->textBox1->TabIndex = 3;
+			this->searchBox->Location = System::Drawing::Point(169, 8);
+			this->searchBox->Name = L"searchBox";
+			this->searchBox->Size = System::Drawing::Size(1094, 20);
+			this->searchBox->TabIndex = 3;
 			// 
 			// Forward_btn
 			// 
@@ -175,6 +177,7 @@ namespace ResearchHelperSpace {
 			this->Forward_btn->TabIndex = 2;
 			this->Forward_btn->Text = L"Forward";
 			this->Forward_btn->UseVisualStyleBackColor = true;
+			this->Forward_btn->Click += gcnew System::EventHandler(this, &ResearchHelper::Forward_btn_Click);
 			// 
 			// Backwards_btn
 			// 
@@ -184,6 +187,7 @@ namespace ResearchHelperSpace {
 			this->Backwards_btn->TabIndex = 1;
 			this->Backwards_btn->Text = L"Backwards";
 			this->Backwards_btn->UseVisualStyleBackColor = true;
+			this->Backwards_btn->Click += gcnew System::EventHandler(this, &ResearchHelper::Backwards_btn_Click);
 			// 
 			// webBrowser1
 			// 
@@ -201,7 +205,7 @@ namespace ResearchHelperSpace {
 			this->ClientSize = System::Drawing::Size(1377, 746);
 			this->Controls->Add(this->tabControl);
 			this->Name = L"ResearchHelper";
-			this->Text = L"ResearchHelper";
+			this->Text = L"Research Helper v0.0.3";
 			this->Load += gcnew System::EventHandler(this, &ResearchHelper::ResearchHelper_Load);
 			this->tabControl->ResumeLayout(false);
 			this->SearchTab->ResumeLayout(false);
@@ -213,6 +217,9 @@ namespace ResearchHelperSpace {
 	
 	// here and below is in .cpp file
 	private: System::Void ResearchHelper_Load(System::Object^  sender, System::EventArgs^  e);
-	};//end of class ResearchHelper
+	private: System::Void Backwards_btn_Click(System::Object^  sender, System::EventArgs^  e);
+	private: System::Void Forward_btn_Click(System::Object^  sender, System::EventArgs^  e);
+	private: System::Void Go_btn_Click(System::Object^  sender, System::EventArgs^  e);
+};//end of class ResearchHelper
 }
 //end custom namespace
