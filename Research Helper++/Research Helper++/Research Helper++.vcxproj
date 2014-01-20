@@ -43,6 +43,8 @@
   <ItemGroup>
     <EmbeddedResource Include="Research Helper.resx">
       <DependentUpon>Research Helper.h</DependentUpon>
+      <LogicalName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </LogicalName>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
