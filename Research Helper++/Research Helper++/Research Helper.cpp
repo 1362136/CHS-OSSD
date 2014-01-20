@@ -1,6 +1,6 @@
 #include "Research Helper.h"
 
-using namespace ResearchHelper;
+using namespace ResearchHelperSpace;
 
 [STAThreadAttribute]
 int main(array<System::String ^> ^args)
@@ -9,12 +9,12 @@ int main(array<System::String ^> ^args)
 	Application::SetCompatibleTextRenderingDefault(false);
 
 	// Create the main window and run it
-	Application::Run(gcnew Form());
+	Application::Run(gcnew ResearchHelperSpace::ResearchHelper());
 
 	return 0;
 }
 
-namespace ResearchHelper{
+namespace ResearchHelperSpace{
 
 	System::Void ResearchHelper::ResearchHelper_Load(System::Object^  sender, System::EventArgs^  e){
 		// TODO something at form load

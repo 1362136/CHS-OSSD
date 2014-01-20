@@ -1,6 +1,6 @@
 #pragma once
 
-namespace ResearchHelper {
+namespace ResearchHelperSpace {
 
 	using namespace System;
 	using namespace System::ComponentModel;
