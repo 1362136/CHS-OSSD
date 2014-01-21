@@ -48,7 +48,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="What it does.txt" />
+    <Text Include="README.txt" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{9EE7C2CA-3932-446F-B611-7568C1FE095B}</ProjectGuid>

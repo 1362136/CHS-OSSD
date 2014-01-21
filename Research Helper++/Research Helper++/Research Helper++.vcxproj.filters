@@ -25,11 +25,11 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="What it does.txt" />
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="Research Helper.resx">
       <Filter>Resource Files</Filter>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="README.txt" />
   </ItemGroup>
 </Project>

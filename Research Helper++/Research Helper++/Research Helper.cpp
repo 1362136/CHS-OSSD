@@ -20,7 +20,7 @@ namespace ResearchHelperSpace{
 		// TODO something at form load
 	}
 	
-	//All the items related to "Search Section are here"
+	//All the items related to "Search" tab are here
 	System::Void ResearchHelper::Backwards_btn_Click(System::Object^  sender, System::EventArgs^  e){
 		this->webBrowser1->GoBack();
 	}
@@ -31,5 +31,20 @@ namespace ResearchHelperSpace{
 
 	System::Void ResearchHelper::Go_btn_Click(System::Object^  sender, System::EventArgs^  e){
 		this->webBrowser1->Navigate(this->searchBox->Text);
+	}
+	//All items related to "Log" tab are hear
+	System::Void ResearchHelper::newEntry_Click(System::Object^  sender, System::EventArgs^  e){
+		this->dailyLog->Text = dailyLog->Text + "\r\n" + Convert::ToString(DateTime::Now) + ":" + "\r\n";
+	}
+
+	System::Void ResearchHelper::clearEntires_Click(System::Object^  sender, System::EventArgs^  e){
+		dailyLog->Text = "";
+	}
+
+	System::Void ResearchHelper::saveEntries_Click(System::Object^  sender, System::EventArgs^  e){
+		String^ fileName = "Log.txt";
+		StreamWriter^ sw = gcnew StreamWriter(fileName);
+		sw->WriteLine(dailyLog->Text);
+		sw->Close();
 	}
 }
